@@ -1,0 +1,184 @@
+=box-sizing($boxmodal: border-box)
+    -webkit-box-sizing: $boxmodal
+    -moz-box-sizing: $boxmodal
+    box-sizing: $boxmodal
+
+=background-size($bg-size)
+    -webkit-background-size: $bg-size
+    -moz-background-size: $bg-size
+    -o-background-size: $bg-size
+    background-size: $bg-size
+
+=flexflow($flex-direction, $flex-wrap)
+    -webkit-flex-flow: $flex-direction $flex-wrap
+    -moz-flex-flow: $flex-direction $flex-wrap
+    flex-flow: $flex-direction $flex-wrap
+
+=flexbasis($flex-basis)
+    -webkit-flex-basis: $flex-basis
+    -moz-flex-flex-basis: $flex-basis
+    flex-basis: $flex-basis
+
+=order($order)
+    -webkit-order: $order
+    -moz-order: $order
+    -ms-order: $order
+    -o-order: $order
+    order: $order
+
+=alignitems($align-items)
+    -webkit-align-items: $align-items
+    -moz-flex-align-items: $align-items
+    align-items: $align-items
+
+=declare-font-face($font-family, $font-filename, $font-weight: normal, $font-style: normal, $font-stretch: normal)
+    @font-face
+        font-family: #{$font-family}
+        src: url(font-path("#{$font-filename}.eot"))
+        src: url(font-path("#{$font-filename}.eot?#iefix")) format("embedded-opentype"), url(font-path("#{$font-filename}.woff")) format("woff"), url(font-path("#{$font-filename}.ttf")) format("truetype"), url(font-path("#{$font-filename}.svg##{$font-filename}")) format("svg")
+        font-weight: $font-weight
+        font-style: $font-style
+        font-stretch: $font-stretch
+
+=input-color($color)
+    &::-webkit-input-placeholder
+        color: $color
+
+    &:-moz-placeholder
+        color: $color
+
+    &::-moz-placeholder
+        color: $color
+
+    &:-ms-input-placeholder
+        color: $color
+
+=position($top: 0, $right: 0, $bottom: 0, $left: 0)
+    @if $top != initial
+        top: $top
+
+    @if $right != initial
+        right: $right
+
+    @if $bottom != initial
+        bottom: $bottom
+
+    @if $left != initial
+        left: $left
+
+=keyframes($name)
+    @-webkit-keyframes #{$name}
+        @content
+
+    @-moz-keyframes #{$name}
+        @content
+
+    @-o-keyframes #{$name}
+        @content
+
+    @keyframes #{$name}
+        @content
+
+=animation-name($name)
+    @each $prefix in (-webkit-, -moz-, -o-)
+        #{$prefix}animation-name: $name
+
+    animation-name: $name
+
+=animation-timing-function($timing-function)
+    @each $prefix in (-webkit-, -moz-, -o-)
+        #{$prefix}animation-timing-function: $timing-function
+
+    animation-timing-function: $timing-function
+
+=animation-iteration-count($iteration-count)
+    @each $prefix in (-webkit-, -moz-, -o-)
+        #{$prefix}animation-iteration-count: $iteration-count
+
+    animation-iteration-count: $iteration-count
+
+=animation-duration($duration)
+    @each $prefix in (-webkit-, -moz-, -o-)
+        #{$prefix}animation-duration: $duration
+
+    animation-duration: $duration
+
+=animation-delay($delay)
+    @each $prefix in (-webkit-, -moz-, -o-)
+        #{$prefix}animation-delay: $delay
+
+    animation-delay: $delay
+
+=radial-gradient($gradient)
+    @each $prefix in (-webkit-, -moz-, -o-)
+        background-image: #{$prefix}radial-gradient(unquote($gradient))
+
+    background-image: radial-gradient(unquote($gradient))
+
+// Application Specific
+
+=gotham($weight: 300, $style: normal)
+    font-family: 'Gotham SSm A', 'Gotham SSm B', sans-serif
+    font-weight: $weight
+    font-style: $style
+
+=categories-color
+    // accessories: wild-watermelon
+    // appliances: mantis
+    // automotive: texas-rose
+    // babies: casablanca
+    // computers: coral
+    // departments: salmon
+    // diet: terracotta
+    // electronics: carnation
+    // flowers: mandy
+    // furniture: valencia
+    // gifts: pablo
+    // health: cranberry
+    // home: tumeric
+    // jewelry: brilliant-rose
+    // kitchen: lavender
+    // maternity: amethyst
+    // mens: napa
+    // office: danube
+    // pets: fountain-blue
+    // photography: deluge
+    // services: puerto-rico
+    // shoes: shamrock
+    // sports: emerald
+    // sunglasses: pastel-green
+    // tools: anzac
+    // toys: lynch
+    // travel: oslo-gray
+    // weddings: viking
+    // womans: wild-watermelon
+    // web: dune
+    @each $name, $color in (white: #ffffff, wild-watermelon: #fc5a75, mantis: #66cc66, texas-rose: #ffb94c, casablanca: #faaa4b, coral: #ff844e, salmon: #fe8464, terracotta: #e38b5b, carnation: #f26553, mandy: #e15a4f, valencia: #db4051, pablo: #7c7669, cranberry: #d65676, tumeric: #c6ce4a, brilliant-rose: #e94e9a, lavender: #d26bd6, amethyst: #9868c1, napa: #aaa393, danube: #6585c7, fountain-blue: #58b0c9, deluge: #7563b0, puerto-rico: #4cd0bc, shamrock: #4ed6a5, emerald: #56cf81, pastel-green: #5cdd66, anzac: #e5c842, lynch: #657890, oslo-gray: #878e94, viking: #58d4d5, dune: #2d2b27)
+
+        .feedback.color--#{$name},
+        .card.color--#{$name}.deals
+            border-top-color: $color
+
+        .card.color--#{$name}.merchants,
+        .card.color--#{$name}.categories,
+        .hero__background.color--#{$name},
+        .popular__list li.color--#{$name}::before,
+        .follow.color--#{$name},
+        .hero__background.color--#{$name},
+        .follow__category.color--#{$name},
+        .coupon-popup__follow.color--#{$name},
+        .type-category .recommendations-card__brand.color--#{$name},
+        .key__icon.color--#{$name},
+        .nav__categories__menu__icon.color--#{$name},
+        .button.color--#{$name}
+            background-color: $color
+
+        .follow.color--#{$name} .button,
+        .follow__category.color--#{$name} .button,
+        .coupon-popup__follow.color--#{$name} .button
+            color: $color
+
+    @media (max-width: $phnLg-width-max)
+        @each $name, $color in (white: #ffffff, wild-watermelon: #fc5a75, mantis: #66cc66, texas-rose: #ffb94c, casablanca: #faaa4b, coral: #ff844e, salmon: #fe8464, terracotta: #e38b5b, carnation: #f26553, mandy: #e15a4f, valencia: #db4051, pablo: #7c7669, cranberry: #d65676, tumeric: #c6ce4a, brilliant-rose: #e94e9a, lavender: #d26bd6, amethyst: #9868c1, napa: #aaa393, danube: #6585c7, fountain-blue: #58b0c9, deluge: #7563b0, puerto-rico: #4cd0bc, shamrock: #4ed6a5, emerald: #56cf81, pastel-green: #5cdd66, anzac: #e5c842, lynch: #657890, oslo-gray: #878e94, viking: #58d4d5, dune: #2d2b27)
+            .categories .key.color--#{$name}
+                background-color: $color
