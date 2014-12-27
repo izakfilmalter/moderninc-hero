@@ -1,8 +1,16 @@
 .hero
     @extend %flexbox
+    @extend %flex-column-nowrap
 
-    height: 100vh
-    width: 100vw
+    margin: calc(100vh - 6rem) auto 6rem 1rem
 
-    > *
-        margin: auto
+    height: auto
+    width: 70vw
+
+.hero__title
+    line-height: 1
+
+    margin: 0 0 0 -5px
+
+.uplayer
+    padding: 1rem

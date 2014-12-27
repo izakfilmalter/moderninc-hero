@@ -21,7 +21,13 @@
 
         <div class="main">
             <div class="hero">
-                <h1>Modern Inc.</h1>
+                <h1 class="hero__title">Modern Inc.</h1>
+                <div class="uplayer">
+                    Welcome to Modern.
+                    <br/>
+                    <br/>
+                    My name is Izak. I don't know what I want to say here. I write good CSS and HTML. I make Modern Style, a framework for Sass, and a style guide for CSS. I am very Dry and I am in love with BEM. I can most website's frontend performance increase by 40%. Hire me to do it to your site.
+                </div>
             </div>
         </div>
 
