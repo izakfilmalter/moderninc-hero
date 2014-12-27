@@ -7,16 +7,7 @@ module.exports = function(grunt) {
           style: 'expanded'
         },
         files: {
-          'css/style.css': 'sass/style.sass'
-        }
-      }
-    },
-
-    connect: {
-      server: {
-        options: {
-          port: grunt.option('port') || 8000,
-          hostname: "localhost",
+          'public/css/style.css': 'sass/style.sass'
         }
       }
     },
@@ -34,7 +25,7 @@ module.exports = function(grunt) {
         tasks: ['sass']
       },
       html: {
-        files: ['*.html']
+        files: ['public/*.php']
       },
       options: {
         livereload: true,
@@ -44,8 +35,7 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-connect');
 
-  grunt.registerTask('default', ['connect', 'watch']);
+  grunt.registerTask('default', ['watch']);
 
 };
