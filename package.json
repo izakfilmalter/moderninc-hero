@@ -1,10 +1,23 @@
 {
   "name": "Modern-Inc-Hero",
   "version": "1.0.0",
-  "repository": "https://github.com/izakfilmalter/moderninc-hero",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/izakfilmalter/moderninc-hero"
+  },
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-contrib-sass": "^0.7.3",
-    "grunt-contrib-watch": "~0.6.1"
-  }
+    "gulp": "^3.8.10",
+    "gulp-ruby-sass": "^1.0.0-alpha"
+  },
+  "description": "HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.",
+  "bugs": {
+    "url": "https://github.com/izakfilmalter/moderninc-hero/issues"
+  },
+  "homepage": "https://github.com/izakfilmalter/moderninc-hero",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Izak Filmalter",
+  "license": "ISC"
 }
