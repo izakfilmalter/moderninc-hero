@@ -1,0 +1,32 @@
+#{$element}
+    @extend %font-inherit
+    line-height: normal
+    @extend %color-inherit
+
+    @extend %margin-0
+
+    &::-moz-focus-inner
+        @extend %border-0
+
+        @extend %padding-0
+
+    &[type="reset"],
+    &[type="submit"]
+        @extend %cursor-pointer
+        @extend %appearance-button
+
+    &[type="checkbox"],
+    &[type="radio"]
+        @extend %padding-0
+
+    &[type="number"]::-webkit-inner-spin-button,
+    &[type="number"]::-webkit-outer-spin-button
+        @extend %height-auto
+
+    [type="search"]
+        -webkit-appearance: textfield
+        box-sizing: content-box
+
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-decoration
+            -webkit-appearance: none

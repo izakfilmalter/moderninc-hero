@@ -1,0 +1,15 @@
+#{$element}
+    font-family: sans-serif
+
+    -ms-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%
+
+    font-size: 15px
+
+    input
+        &[type="button"]
+            @extend %cursor-pointer
+            @extend %appearance-button
+
+        &[disabled]
+            @extend %cursor-default

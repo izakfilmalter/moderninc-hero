@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +7,6 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link rel="stylesheet" href="css/style.css">
     </head>
@@ -26,7 +22,10 @@
                     Welcome to Modern.
                     <br/>
                     <br/>
-                    My name is Izak. I don't know what I want to say here. I write good CSS and HTML. I make Modern Style, a framework for Sass, and a style guide for CSS. I am very Dry and I am in love with BEM. I can most website's frontend performance increase by 40%. Hire me to do it to your site.
+                    My name is Izak. I don't know what I want to say here. I write good CSS and HTML. I make Modern Style, a framework for Sass, and a style guide for CSS. I am very Dry and I am in love with BEM. I can inc most website's frontend performance increase by 40%. Hire me to do it to your site.
+                    <br/>
+                    <br/>
+
                 </div>
             </div>
         </div>
