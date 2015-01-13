@@ -1,0 +1,81 @@
+@function sanatize($var)
+    $var: "#{$var}"
+    @return $var
+
+@function modern-map($modern-map, $media-name)
+    @if map-has-key($modern-map, $media-name)
+        // Check if out $media query size is in our map.
+
+        @if $debug-modern-map
+            @debug modern-map has $media-name media-name key
+
+        // Get the values from $modern-map via the $media-name key
+        $media-name-value: map-get($modern-map, $media-name)
+
+        @if $debug-modern-map
+            @debug $media-name-value media-name-value pre adding new values
+
+        @return $media-name-value
+
+    @else
+        @return false
+
+@function map-search($map, $value)
+
+    // Grab the type of $map
+    $type: type-of($map)
+
+
+    @if $type == list
+        // If it's a list we need to for loop throug to get to the map-has key.
+
+        @if $debug-modern-map
+            @debug map is a $type
+
+        // Get length of $map
+        $length-of-map: length($map)
+
+        $found: false
+
+        @for $i from 1 through $length-of-map
+
+            @if map-has-key(nth($map, $i), $value)
+                // Check if $property is in $media-name-value
+
+                @if $debug-modern-map
+                    @debug map has our $value value in it
+
+                // Get the values from $map via the $value key
+                $value-map: map-get(nth($map, $i), $value)
+
+                @if $debug-modern-map
+                    @debug $map map pre adding new values
+
+                $found: true
+
+                @return (list, $value-map, $i)
+
+        @if $found == false
+
+            @return false
+
+    @else
+        @if $debug-modern-map
+            @debug map is a $type
+
+        @if map-has-key($map, $value)
+            // Check if $value is in $map
+
+            @if $debug-modern-map
+                @debug map has our $value value in it
+
+            // Get the values from $media-name-value via the $media-name key
+            $value-map: map-get($map, $value)
+
+            @if $debug-modern-map
+                @debug $map map pre adding new values
+
+            @return (map, $value-map)
+
+        @else
+            @return false

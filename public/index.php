@@ -15,7 +15,7 @@
                     Welcome to Modern.
                     <br/>
                     <br/>
-                    My name is Izak. I don't know what I want to say here. I write good CSS and HTML. I make Modern Style, a framework for Sass, and a style guide for CSS. I am very Dry and I am in love with BEM. I can inc most website's frontend performance increase by 40%. Hire me to do it to your site.
+                    My name is Izak. I don't know what I want to say here. I write good CSS and HTML. I make <a href="https://github.com/ModernInc/modern-style">Modern Style</a>, a framework for Sass, and a style guide for CSS. I am very Dry and I am in love with BEM. I can inc most website's frontend performance increase by 40%. Hire me to do it to your site.
                     <br/>
                     <br/>
 
@@ -23,5 +23,6 @@
             </div>
         </div>
 
+    <?php include 'script.php'; ?>
     </body>
 </html>
